@@ -1,37 +1,38 @@
-# Araç Plaka Tanıma Sistemi
-Bu proje, araç plaka kodlarının görüntülerini okumak,
-bu plaka kodlarının numarasını metne dönüştürmek ve plaka bilgilerini
-tarih, saat ve plakanın il kodu ile birlikte
-veri tabanında anlık olarak kayıtlarını saklamak için kullanılır.
+# AraÃ§ Plaka TanÄ±ma Sistemi
+Bu proje, araÃ§ plaka kodlarÄ±nÄ±n gÃ¶rÃ¼ntÃ¼lerini okumak,
+bu plaka kodlarÄ±nÄ±n numarasÄ±nÄ± metne dÃ¶nÃ¼ÅŸtÃ¼rmek ve plaka bilgilerini
+tarih, saat ve plakanÄ±n il kodu ile birlikte
+veri tabanÄ±nda anlÄ±k olarak kayÄ±tlarÄ±nÄ± saklamak iÃ§in kullanÄ±lÄ±r.
 
 ## Uygulama
-Araç yönetimi için yaygın olarak kullanılan bir teknoloji olan Plaka Tanıma Sistemi, biletsiz park, geçiş ücretleri, çalıntı araç tespiti ve otomatik faturalandırma
-gibi birçok işlemde kullanılır. Plaka Tanıma Sistemi, çeşitli bilgileri bir araya getirerek birden fazla verinin hızlıca toplanmasına ve bu verilerin birbiriyle
-ilişkilendirilmesine imkan sağlar.
-Otoyollarda sıkça kullanılan bu sistem, araç hız tespiti, ihlal tespiti ve geçiş kayıtları için de etkili bir şekilde kullanılır. 
-Otoyol üzerinde belirli noktalara yerleştirilen Radar (Radio Detection And Ranging) hız tespit cihazları, plaka tanıma sistemine entegre edilerek çalışır.
-Bu sayede yol üzerinden geçen araçların hızları ve plakaları tespit edilir. Hız ihlali yapan araçlara süratle ceza kesme yeteneğine sahiptir.
-Sadece hız ihlali yapan araçlar değil, otoyolu kullanan tüm araçların plakaları tespit edilir ve her araç için resimli bir kayıt oluşturulur.
-Ülkemizde, karayolları yönetmeliğine uygun olarak plaka gövdeleri alüminyumdan yapılmış olup boyutları 11x52 cm'dir. Bu plakalar,
-araçların hem ön hem de arka kısımlarında bulunmak zorundadır.
+AraÃ§ yÃ¶netimi iÃ§in yaygÄ±n olarak kullanÄ±lan bir teknoloji olan Plaka TanÄ±ma Sistemi, biletsiz park, geÃ§iÅŸ Ã¼cretleri, Ã§alÄ±ntÄ± araÃ§ tespiti ve otomatik faturalandÄ±rma
+gibi birÃ§ok iÅŸlemde kullanÄ±lÄ±r. Plaka TanÄ±ma Sistemi, Ã§eÅŸitli bilgileri bir araya getirerek birden fazla verinin hÄ±zlÄ±ca toplanmasÄ±na ve bu verilerin birbiriyle
+iliÅŸkilendirilmesine imkan saÄŸlar.
+Otoyollarda sÄ±kÃ§a kullanÄ±lan bu sistem, araÃ§ hÄ±z tespiti, ihlal tespiti ve geÃ§iÅŸ kayÄ±tlarÄ± iÃ§in de etkili bir ÅŸekilde kullanÄ±lÄ±r. 
+Otoyol Ã¼zerinde belirli noktalara yerleÅŸtirilen Radar (Radio Detection And Ranging) hÄ±z tespit cihazlarÄ±, plaka tanÄ±ma sistemine entegre edilerek Ã§alÄ±ÅŸÄ±r.
+Bu sayede yol Ã¼zerinden geÃ§en araÃ§larÄ±n hÄ±zlarÄ± ve plakalarÄ± tespit edilir. HÄ±z ihlali yapan araÃ§lara sÃ¼ratle ceza kesme yeteneÄŸine sahiptir.
+Sadece hÄ±z ihlali yapan araÃ§lar deÄŸil, otoyolu kullanan tÃ¼m araÃ§larÄ±n plakalarÄ± tespit edilir ve her araÃ§ iÃ§in resimli bir kayÄ±t oluÅŸturulur.
+Ãœlkemizde, karayollarÄ± yÃ¶netmeliÄŸine uygun olarak plaka gÃ¶vdeleri alÃ¼minyumdan yapÄ±lmÄ±ÅŸ olup boyutlarÄ± 11x52 cm'dir. Bu plakalar,
+araÃ§larÄ±n hem Ã¶n hem de arka kÄ±sÄ±mlarÄ±nda bulunmak zorundadÄ±r.
 
 
 
-## Kütüphaneler
--sqlite3
+## KÃ¼tÃ¼phaneler
+- date, datetime
+- sqlite3
 - OpenCV
 - [Tesseract 4](https://github.com/tesseract-ocr/tesseract/wiki)
 
-##Kullanım
-- araclar.db tanımlanan plakaların tarih, saat, plaka numarası ve il kodunu gösterir.
-- Tesseract OCR işlemi sunan bir kütüphanedir.
-- Tesseract 100'den fazla dil seçeneğine sahiptir
-    -Eğer değiştirme isterseniz calistir.py dosyası içerisindeki
-     config = ('-l tur --oem 1 --psm 3') satırı düzenleyiniz "tur" tercih ettiğiniz dili belirler
+##KullanÄ±m
+- araclar.db tanÄ±mlanan plakalarÄ±n tarih, saat, plaka numarasÄ± ve il kodunu gÃ¶sterir.
+- Tesseract OCR iÅŸlemi sunan bir kÃ¼tÃ¼phanedir.
+- Tesseract 100'den fazla dil seÃ§eneÄŸine sahiptir
+    -EÄŸer deÄŸiÅŸtirmek isterseniz calistir.py dosyasÄ± iÃ§erisindeki
+        config = ('-l tur --oem 1 --psm 3') satÄ±rÄ± dÃ¼zenleyiniz "tur" tercih ettiÄŸiniz dili belirler
 
 
 
-##Çalıştırmak İçin;
+##Ã‡alÄ±ÅŸtÄ±rmak Ä°Ã§in;
 
     python calistir.py
     
